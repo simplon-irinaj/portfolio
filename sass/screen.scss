@@ -1,0 +1,205 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//les marges et les padding ne sont pas ajoutés aux tailles définies pour les divs//
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+$font:Amatic SC;
+$size: 2em;
+$color: #000;
+
+body {
+  font-family: $font, Geneva, Arial, sans-serif;
+  font-size: $size;
+  color: $color;
+  background-color: lavender;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+//--------------------//computer size//-------------------------//
+
+.tuiles {
+    width: 1600px;
+    height: 800px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: relative;
+}
+
+.foreground {
+    position: absolute;
+    z-index: 1;
+}
+
+.back {
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+}
+
+.photoProfil {
+    border: solid 1px black;
+    shape-outside: circle(); 
+    border-radius: 50%;
+    background-color: navajowhite
+}
+
+p {
+    top: 50px;
+    right: 100px;
+    color: $color;
+}
+
+.titre {
+    color: $color;
+}
+
+.sameColor {
+    color: navajowhite;
+}
+
+.icones {
+    width: 4vw;
+    height: auto;
+}
+
+.animContact:hover {
+    animation: bounce 0.7s ease infinite alternate;
+}
+
+@keyframes bounce {
+  from {transform: translateY(0);}
+     to   {transform: translateY(20px);}
+}
+
+.animSouris:hover {
+    animation: translate 0.7s ease;
+}
+
+@keyframes translate {
+    from {transform: translateX(0);}
+     to   {transform: translateX(-20px);}
+}
+
+.tuile {
+    width: 400px;
+    height: 260px;
+    background-color: navajowhite;
+    transition: all 1s;
+}
+
+.tuile:hover {
+     transform: rotate(random(2)+deg);
+    -webkit-transform: rotate(random(2)+deg);
+    -moz-transform: rotate(random(2)+deg);
+    -ms-transform: rotate(random(2)+deg);
+}
+
+@keyframes apparition {
+ from {
+    opacity:0;
+}to {
+    opacity:1;
+}
+}
+
+.tuile1 {
+   animation: apparition 0.1s;
+  -moz-animation: apparition 0.1s;
+  -webkit-animation: apparition 0.1s;
+  -o-animation: apparition 0.1s;
+}
+
+.tuile2 {
+    animation: apparition 0.2s;
+  -moz-animation: apparition 0.2s;
+  -webkit-animation: apparition 0.2s;
+  -o-animation: apparition 0.2s;
+}
+
+.tuile3 {
+      animation: apparition 0.3s;
+  -moz-animation: apparition 0.3s;
+  -webkit-animation: apparition 0.3s;
+  -o-animation: apparition 0.3s;
+}
+
+.tuile4 {
+    animation: apparition 0.4s;
+  -moz-animation: apparition 0.4s;
+  -webkit-animation: apparition 0.4s;
+  -o-animation: apparition 0.4s;
+}
+
+.tuile5 {
+    animation: apparition 0.5s;
+  -moz-animation: apparition 0.5s;
+  -webkit-animation: apparition 0.5s;
+  -o-animation: apparition 0.5s;
+}
+
+.tuile6 {
+      animation: apparition 0.6s;
+  -moz-animation: apparition 0.6s;
+  -webkit-animation: apparition 0.6s;
+  -o-animation: apparition 0.6s;
+}
+
+.tuile7 {
+      animation: apparition 0.7s;
+  -moz-animation: apparition 0.7s;
+  -webkit-animation: apparition 0.7s;
+  -o-animation: apparition 0.7s;
+}
+
+.tuile8 {
+    animation: apparition 0.8s;
+  -moz-animation: apparition 0.8s;
+  -webkit-animation: apparition 0.8s;
+  -o-animation: apparition 0.8s;
+}
+
+.tuile9 {
+    animation: apparition 0.9s;
+  -moz-animation: apparition 0.9s;
+  -webkit-animation: apparition 0.9s;
+  -o-animation: apparition 0.9s;
+}
+
+.tuile10 {
+    animation: apparition 1s;
+  -moz-animation: apparition 1s;
+  -webkit-animation: apparition 1s;
+  -o-animation: apparition 1s;
+}
+
+.tuile11 {
+    animation: apparition 1.1s;
+  -moz-animation: apparition 1.1s;
+  -webkit-animation: apparition 1.1s;
+  -o-animation: apparition 1.1s;
+}
+
+.tuile12 {
+    animation: apparition 1.2s;
+  -moz-animation: apparition 1.2s;
+  -webkit-animation: apparition 1.2s;
+  -o-animation: apparition 1.2s;
+}
