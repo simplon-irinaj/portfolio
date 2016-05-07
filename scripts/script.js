@@ -13,4 +13,7 @@ function putDiv() {
 }
 
  
-//  function à vérifier
+function bubbleAppears() {
+    var newBubble = document.getElementById("bubbleHidden");
+    newBubble.style.display="block";
+}

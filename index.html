@@ -12,20 +12,47 @@
   <body>
       
       <div class="tuiles" id="background">
-          <img class="back photoProfil" src="images/profil_petit.png" alt="">
-          <p class="back">Je m'appelle Irina Jacquin, je suis webdesigneuse et développeuse front-end.</p>
-          <img class="icones foreground" onclick="putDiv()" src="images/logo.png" alt="">    
-          <div class="remove tuile tuile1"></div><h1 class="remove foreground">Irina Jacquin <img class="icones" src="images/svg/contact1.svg" alt=""><img class="icones animContact" src="images/svg/contact2.svg" alt=""></h1>
+          <div class="back container">
+              <img class="back photoProfil" src="images/profil_petit.png" alt="">
+              <p class="back texte texteColor">Bonjour, je m'appelle Irina Jacquin, je suis webdesigneuse et développeuse front-end.</br>
+                  </br>Je suis à la recherche d'une entreprise, j'aime le design, j'aime coder et apprendre.</br> 
+                  </br>J'ai une diplôme de design graphique en médias imprimés.</br></p> 
+              <p class="back texte texteSmall">Lors d'un stage en Belgique, j'ai découvert le webdesign et le développement web.</br>
+                  </br>A mon retour en France, j'ai suivi une formation de six mois à Simplon Lyon.</br>
+                  </br>Simplon est une formation gratuite en développement front et back-end.</br>
+                  </br>Avec mes compétences en graphisme, je me suis naturellement orientée vers le front-end.</p>
+               <p class="back texte texteSkills">Compétences: photoshop / illustrator / indesign / html5 / css3 / sass / javascript / </br>
+                   </br>responsive design / un peu de php et mysql</p>
+          </div>      
+          <img class="logo foreground" onclick="putDiv()" src="images/logo.png" alt="">    
+          <div class="remove tuile tuile1"></div>
+          <h1 class="remove foreground title">Irina Jacquin : webdesign et développement front-end</h1>
+          <img class="remove foreground contact" src="images/svg/contact1.svg" alt="">
+          <img class="remove foreground contact animContact" src="images/svg/contact2.svg" alt="">
+          <h2 class="remove foreground infos">irina.jacquin@gmail.com </br>06 28 37 42 77</h2>
+          <a class="remove foreground" href="https://github.com/simplon-irinaj?tab=repositories">GitHub</a>
           <div class="remove tuile tuile2"></div>
           <div class="remove tuile tuile3"></div>
           <div class="remove tuile tuile4"></div>
-          <div class="remove tuile tuile5"><img src=" " alt=""><a href="">Voir le site</a></div><h1 class="remove foreground">Projets <img class="icones" src="images/svg/souris1.svg" alt=""><img class="icones animSouris" src="images/svg/souris2.svg" alt=""></h1>
+          <div class="remove tuile tuile5">
+              <img src=" " alt=""><a href="">Voir le site</a>
+          </div>
+          <h1 class="remove foreground subtitle">Projets</h1> 
+          <img class="remove foreground souris" src="images/svg/souris1.svg" alt="">
+          <img class="remove foreground souris animSouris" src="images/svg/souris2.svg" alt="">
           <div class="remove tuile tuile6"></div>
-          <div class="remove tuile tuile7"><img src=" " alt=""><a href="">Voir le site</a></div>
+          <div class="remove tuile tuile7">
+              <img src=" " alt=""><a href="">Voir le site</a>
+          </div>
           <div class="remove tuile tuile8"></div>
           <div class="remove tuile tuile9"></div>
-          <div class="remove tuile tuile10"><img src=" " alt=""><a href="">Voir le site</a></div>
-          <div class="remove tuile tuile11"></div><h1 class="remove foreground" onclick="removeDiv()">About <img class="icones" src="images/svg/bulle1.svg" alt=""><img class="icones" src="images/svg/bulle2.svg" alt=""></h1>
+          <div class="remove tuile tuile10">
+              <img src=" " alt=""><a href="">Voir le site</a>
+          </div>
+          <div class="remove tuile tuile11"></div>
+          <h1 class="remove foreground subtitleBis" onclick="removeDiv()">About</h1> 
+          <img class="remove foreground bubbles" onmouseover="bubbleAppears()" src="images/svg/bulle2.svg" alt="">
+          <img class="remove foreground bubbles" id="bubbleHidden" onclick="removeDiv()" src="images/svg/bulle1.svg" alt="">
           <div class="remove tuile tuile12"></div>       
       </div>
       

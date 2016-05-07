@@ -18,70 +18,121 @@ html {
   box-sizing: inherit;
 }
 
-$font:Amatic SC;
-$size: 2em;
-$color: #000;
+$ama:Amatic SC;
+$default: 2em;
+$noir: #000;
+$violet: slateblue;
+$titre: 1.2em;
 
 body {
-  font-family: $font, Geneva, Arial, sans-serif;
-  font-size: $size;
-  color: $color;
+  font-family: $ama, Geneva, Arial, sans-serif;
+  font-size: $default;
+  color: $noir;
   background-color: lavender;
+  background-image: url(../images/background.png);
+  background-repeat: repeat;
+  background-size:40vw;
   padding: 0;
   margin: 0;
   overflow: hidden;
 }
 
-//--------------------//computer size//-------------------------//
+//--------------------//COMPUTER SIZE//---------------------------//
 
 .tuiles {
-    width: 1600px;
-    height: 800px;
+    width: 100vw;
+    height: 110vh;
     display: inline-flex;
     flex-wrap: wrap;
     align-content: flex-start;
     position: relative;
 }
 
+
+//-------------------//BACKGROUND//---------------------------//
+
+.back {
+    position: absolute;
+    z-index: -1;
+}
+
+.container {
+    width: 48vw;
+    height: 90vh;
+    top: 5vh;
+    right: 5vw;
+    color: $noir;
+    background-color: white;
+    border-radius: 5%;
+}
+
+.photoProfil {
+    shape-outside: circle(); 
+    border-radius: 50%;
+    background-color: lavender;
+    margin: auto;
+    top: 4vh;
+    left: 0;
+    right: 0;
+}
+
+.texte {
+    margin-top:0.5em;
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:0;
+    top: 22vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 0.8em;
+}
+
+.texteColor {
+    color: $violet;
+}
+
+.texteSmall {
+    top: 45vh;
+}
+
+.texteSkills {
+    top: 73vh;
+    color: $violet;
+}
+
+//-------------------//FOREGROUND//---------------------------//
+
 .foreground {
     position: absolute;
     z-index: 1;
 }
 
-.back {
-    position: absolute;
-    z-index: -1;
-    top: 100px;
-}
-
-.photoProfil {
-    border: solid 1px black;
-    shape-outside: circle(); 
-    border-radius: 50%;
-    background-color: navajowhite
-}
-
-p {
-    top: 50px;
-    right: 100px;
-    color: $color;
-}
-
-.titre {
-    color: $color;
-}
-
-.sameColor {
-    color: navajowhite;
-}
-
-.icones {
-    width: 4vw;
+.logo {
+    width: 4.5vw;
     height: auto;
+    top: 2vh;
+    left: 1vw;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.title {
+    font-size: $titre;
+    color: $violet;
+    top: 2vh;
+    left: 8vw;
+}
+
+.contact {
+    top: 9vh;
+    left: 8vw; 
 }
 
 .animContact:hover {
-    animation: bounce 0.7s ease infinite alternate;
+    animation: bounce 0.1s ease infinite alternate;
 }
 
 @keyframes bounce {
@@ -89,8 +140,45 @@ p {
      to   {transform: translateY(20px);}
 }
 
+.infos {
+    top: 15vh;
+    left: 8vw;
+}
+
+a {
+    text-decoration: none;
+    color: $noir;
+    border: solid 1px $noir;
+    padding-right: 0.2vw;
+    padding-left: 0.2vw;
+    top: 24vh;
+    left: 8vw;
+}
+
+a:hover {
+    background-color: $violet;
+    border: solid 1px $violet;
+}
+
+.subtitle {
+    font-size: $titre;
+    color: $violet;
+    left: 28vw;
+}
+
+.subtitleBis {
+    @extend .logo:hover;
+    font-size: $titre;
+    color: $violet;
+}
+
+.souris {
+    top: 37vh;
+    left: 33vw;
+}
+
 .animSouris:hover {
-    animation: translate 0.7s ease;
+    animation: translate 0.3s ease;
 }
 
 @keyframes translate {
@@ -98,9 +186,24 @@ p {
      to   {transform: translateX(-20px);}
 }
 
+.bubbles {
+    width: 5vw;
+    height: auto;
+    bottom: 34vh;
+    right: 16vw;
+}
+
+#bubbleHidden {
+    display: none;
+}
+
+#bubbleHidden {
+    cursor: pointer;
+}
+
 .tuile {
-    width: 400px;
-    height: 260px;
+    width: 25vw;
+    height: 36vh;
     background-color: navajowhite;
     transition: all 1s;
 }

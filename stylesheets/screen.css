@@ -83,74 +83,123 @@ html {
   box-sizing: inherit;
 }
 
-/* line 25, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 body {
   font-family: Amatic SC, Geneva, Arial, sans-serif;
   font-size: 2em;
   color: #000;
   background-color: lavender;
+  background-image: url(../images/background.png);
+  background-repeat: repeat;
+  background-size: 40vw;
   padding: 0;
   margin: 0;
   overflow: hidden;
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .tuiles {
-  width: 1600px;
-  height: 800px;
+  width: 100vw;
+  height: 110vh;
   display: inline-flex;
   flex-wrap: wrap;
   align-content: flex-start;
   position: relative;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
+.back {
+  position: absolute;
+  z-index: -1;
+}
+
+/* line 59, ../sass/screen.scss */
+.container {
+  width: 48vw;
+  height: 90vh;
+  top: 5vh;
+  right: 5vw;
+  color: #000;
+  background-color: white;
+  border-radius: 5%;
+}
+
+/* line 69, ../sass/screen.scss */
+.photoProfil {
+  shape-outside: circle();
+  border-radius: 50%;
+  background-color: lavender;
+  margin: auto;
+  top: 4vh;
+  left: 0;
+  right: 0;
+}
+
+/* line 79, ../sass/screen.scss */
+.texte {
+  margin-top: 0.5em;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  top: 22vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 0.8em;
+}
+
+/* line 91, ../sass/screen.scss */
+.texteColor {
+  color: slateblue;
+}
+
+/* line 95, ../sass/screen.scss */
+.texteSmall {
+  top: 45vh;
+}
+
+/* line 99, ../sass/screen.scss */
+.texteSkills {
+  top: 73vh;
+  color: slateblue;
+}
+
+/* line 106, ../sass/screen.scss */
 .foreground {
   position: absolute;
   z-index: 1;
 }
 
-/* line 51, ../sass/screen.scss */
-.back {
-  position: absolute;
-  z-index: -1;
-  top: 100px;
-}
-
-/* line 57, ../sass/screen.scss */
-.photoProfil {
-  border: solid 1px black;
-  shape-outside: circle();
-  border-radius: 50%;
-  background-color: navajowhite;
-}
-
-/* line 64, ../sass/screen.scss */
-p {
-  top: 50px;
-  right: 100px;
-  color: #000;
-}
-
-/* line 70, ../sass/screen.scss */
-.titre {
-  color: #000;
-}
-
-/* line 74, ../sass/screen.scss */
-.sameColor {
-  color: navajowhite;
-}
-
-/* line 78, ../sass/screen.scss */
-.icones {
-  width: 4vw;
+/* line 111, ../sass/screen.scss */
+.logo {
+  width: 4.5vw;
   height: auto;
+  top: 2vh;
+  left: 1vw;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
+.logo:hover, .subtitleBis {
+  cursor: pointer;
+}
+
+/* line 122, ../sass/screen.scss */
+.title {
+  font-size: 1.2em;
+  color: slateblue;
+  top: 2vh;
+  left: 8vw;
+}
+
+/* line 129, ../sass/screen.scss */
+.contact {
+  top: 9vh;
+  left: 8vw;
+}
+
+/* line 134, ../sass/screen.scss */
 .animContact:hover {
-  animation: bounce 0.7s ease infinite alternate;
+  animation: bounce 0.1s ease infinite alternate;
 }
 
 @keyframes bounce {
@@ -161,9 +210,51 @@ p {
     transform: translateY(20px);
   }
 }
-/* line 92, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
+.infos {
+  top: 15vh;
+  left: 8vw;
+}
+
+/* line 148, ../sass/screen.scss */
+a {
+  text-decoration: none;
+  color: #000;
+  border: solid 1px #000;
+  padding-right: 0.2vw;
+  padding-left: 0.2vw;
+  top: 24vh;
+  left: 8vw;
+}
+
+/* line 158, ../sass/screen.scss */
+a:hover {
+  background-color: slateblue;
+  border: solid 1px slateblue;
+}
+
+/* line 163, ../sass/screen.scss */
+.subtitle {
+  font-size: 1.2em;
+  color: slateblue;
+  left: 28vw;
+}
+
+/* line 169, ../sass/screen.scss */
+.subtitleBis {
+  font-size: 1.2em;
+  color: slateblue;
+}
+
+/* line 175, ../sass/screen.scss */
+.souris {
+  top: 37vh;
+  left: 33vw;
+}
+
+/* line 180, ../sass/screen.scss */
 .animSouris:hover {
-  animation: translate 0.7s ease;
+  animation: translate 0.3s ease;
 }
 
 @keyframes translate {
@@ -174,20 +265,38 @@ p {
     transform: translateX(-20px);
   }
 }
-/* line 101, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
+.bubbles {
+  width: 5vw;
+  height: auto;
+  bottom: 34vh;
+  right: 16vw;
+}
+
+/* line 196, ../sass/screen.scss */
+#bubbleHidden {
+  display: none;
+}
+
+/* line 200, ../sass/screen.scss */
+#bubbleHidden {
+  cursor: pointer;
+}
+
+/* line 204, ../sass/screen.scss */
 .tuile {
-  width: 400px;
-  height: 260px;
+  width: 25vw;
+  height: 36vh;
   background-color: navajowhite;
   transition: all 1s;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 .tuile:hover {
   transform: rotate(1deg);
   -webkit-transform: rotate(2deg);
   -moz-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
+  -ms-transform: rotate(1deg);
 }
 
 @keyframes apparition {
@@ -198,7 +307,7 @@ p {
     opacity: 1;
   }
 }
-/* line 123, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .tuile1 {
   animation: apparition 0.1s;
   -moz-animation: apparition 0.1s;
@@ -206,7 +315,7 @@ p {
   -o-animation: apparition 0.1s;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .tuile2 {
   animation: apparition 0.2s;
   -moz-animation: apparition 0.2s;
@@ -214,7 +323,7 @@ p {
   -o-animation: apparition 0.2s;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .tuile3 {
   animation: apparition 0.3s;
   -moz-animation: apparition 0.3s;
@@ -222,7 +331,7 @@ p {
   -o-animation: apparition 0.3s;
 }
 
-/* line 144, ../sass/screen.scss */
+/* line 247, ../sass/screen.scss */
 .tuile4 {
   animation: apparition 0.4s;
   -moz-animation: apparition 0.4s;
@@ -230,7 +339,7 @@ p {
   -o-animation: apparition 0.4s;
 }
 
-/* line 151, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 .tuile5 {
   animation: apparition 0.5s;
   -moz-animation: apparition 0.5s;
@@ -238,7 +347,7 @@ p {
   -o-animation: apparition 0.5s;
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 .tuile6 {
   animation: apparition 0.6s;
   -moz-animation: apparition 0.6s;
@@ -246,7 +355,7 @@ p {
   -o-animation: apparition 0.6s;
 }
 
-/* line 165, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 .tuile7 {
   animation: apparition 0.7s;
   -moz-animation: apparition 0.7s;
@@ -254,7 +363,7 @@ p {
   -o-animation: apparition 0.7s;
 }
 
-/* line 172, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 .tuile8 {
   animation: apparition 0.8s;
   -moz-animation: apparition 0.8s;
@@ -262,7 +371,7 @@ p {
   -o-animation: apparition 0.8s;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 .tuile9 {
   animation: apparition 0.9s;
   -moz-animation: apparition 0.9s;
@@ -270,7 +379,7 @@ p {
   -o-animation: apparition 0.9s;
 }
 
-/* line 186, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 .tuile10 {
   animation: apparition 1s;
   -moz-animation: apparition 1s;
@@ -278,7 +387,7 @@ p {
   -o-animation: apparition 1s;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 .tuile11 {
   animation: apparition 1.1s;
   -moz-animation: apparition 1.1s;
@@ -286,7 +395,7 @@ p {
   -o-animation: apparition 1.1s;
 }
 
-/* line 200, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .tuile12 {
   animation: apparition 1.2s;
   -moz-animation: apparition 1.2s;
